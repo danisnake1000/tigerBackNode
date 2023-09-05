@@ -1,0 +1,15 @@
+CREATE TABLE caracteristicas(
+    ID INT NOT NULL AUTO_INCREMENT,
+    icon VARCHAR(400) NOT NULL,
+    descripcion VARCHAR(252) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Deporte(
+    ID INT NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    genero VARCHAR(252) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
