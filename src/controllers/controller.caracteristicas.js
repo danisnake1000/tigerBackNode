@@ -8,19 +8,20 @@ export const getCaracteristicas = async (req, res) => {
     res.json(resp)
 }
 export const getIdCaracteristicas = async (req, res) => {
-    const {icon,descripcion} = req.body
-    const [resp] = await pool.query("")
+  
+    const [resp] = await pool.query(" SELECT * FROM caracteristicas")
+    res.json(resp)
 
 }
 export const postCaracteristicas = async (req, res) => {
     const {icon,descripcion} = req.body
     const [resp] = await pool.query("INSERT INTO caracteristicas(icon,descripcion) VALUES(?,?)",[icon,descripcion])
     res.send({
-        id : resp.id,
+        id : resp.insertId,
         icon,
         descripcion
     })
-
+  
 }
 
 export const updateCaracteristicas = async (req, res) => {
