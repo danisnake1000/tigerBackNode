@@ -4,7 +4,7 @@ import { getCaracteristicas ,
     postCaracteristicas,
     updateCaracteristicas,
     deleteCaracteristicas 
-      } from "../controllers/controller.caracteristicas.js";
+      } from "../controllers/caracteristicas.controllers.js";
       
 const router = Router()
 
@@ -13,7 +13,7 @@ router.get('/caracteristicas', getCaracteristicas  )
 
 router.get('/caracteristicas/:id', getIdCaracteristicas  )
 
-router.post('/caracteristicas', postCaracteristicas  )
+router.post('/caracteristica', postCaracteristicas  )
 
 router.put('/caracteristicas/:id', updateCaracteristicas  )
 
