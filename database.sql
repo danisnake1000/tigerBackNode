@@ -13,10 +13,11 @@ CREATE TABLE Categorias(
     PRIMARY KEY (id), 
     createAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
-CREATE TABLE productos(
+CREATE TABLE Productos(
     ID INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(255) NOT NULL,
     descripcion VARCHAR(255),
+    urlImagen VARCHAR(455),
     deporte VARCHAR (255),
     genero VARCHAR(255),
     PRIMARY KEY (id),
@@ -24,7 +25,8 @@ CREATE TABLE productos(
 );
 CREATE TABLE ImagenProductos(
     ID INT NOT NULL AUTO_INCREMENT,
-    url VARCHAR(255),
+    url VARCHAR(455),
+    PRIMARY KEY (id),
     createAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE Asset(
@@ -32,10 +34,10 @@ CREATE TABLE Asset(
     contentType VARCHAR(255),
     createAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
-CREATE TABLE Usuarios(
+CREATE TABLE Users(
     ID INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(255) NOT NULL,
-    nombreDeUsuario VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
     apellido VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     PRIMARY KEY (id),

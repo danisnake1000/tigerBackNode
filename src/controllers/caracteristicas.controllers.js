@@ -7,7 +7,7 @@ export const getCaracteristicas = async (req, res) => {
 
 export const getIdCaracteristicas = async (req, res) => {
   const [resp] = await pool.query("SELECT * FROM caracteristicas WHERE id = ?",
-    [res.param.id]
+    [req.params.id]
   );
   res.json(resp[0]);
 };
@@ -29,5 +29,7 @@ export const updateCaracteristicas = async (req, res) => {
 };
 
 export const deleteCaracteristicas = async (req, res) => {
-  const respuesta = await pool.query();
+  const resp = await pool.query( " DELETE FROM caracteristicas WHERE id = ? ", [req.params.id]);
+  return res.status(404).json({messange:"Caracteristias no encontrada"});
+  res.json(resp);
 };

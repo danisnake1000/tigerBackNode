@@ -13,7 +13,7 @@ router.get('/caracteristicas', getCaracteristicas  )
 
 router.get('/caracteristicas/:id', getIdCaracteristicas  )
 
-router.post('/caracteristica', postCaracteristicas  )
+router.post('/caracteristicas', postCaracteristicas  )
 
 router.put('/caracteristicas/:id', updateCaracteristicas  )
 

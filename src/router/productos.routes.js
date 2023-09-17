@@ -6,6 +6,7 @@ import {
   actualizarProducto,
   agregarProducto,
 } from "../controllers/productos.contollers.js"
+
 const router = Router();
 
 router.get("/productos", obtenerProductos);

@@ -3,7 +3,7 @@ import { PORT } from "./config.js";
 import caracteristicas from "./router/caracteristicas.routes.js"
 //  import categorias from "./router/categorias.routes.js"
 import productos from "./router/productos.routes.js"
-// import usuarios from "./router/usuarios.routes.js"
+ import usuarios from "./router/usuarios.routes.js"
 
 import indexRoutes from "./router/index.routes.js"
 
@@ -13,6 +13,7 @@ app.use(indexRoutes)
 app.use(express.json())
 app.use(caracteristicas)
 app.use(productos)
+app.use(usuarios)
 
 
 
